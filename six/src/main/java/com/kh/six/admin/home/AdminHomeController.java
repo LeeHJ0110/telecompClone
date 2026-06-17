@@ -1,0 +1,15 @@
+package com.kh.six.admin.home;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@Controller
+@RequestMapping
+public class AdminHomeController {
+
+    @GetMapping("/employee/adminhome")
+    public String home(){
+        return "admin/adminhome";
+    }
+}

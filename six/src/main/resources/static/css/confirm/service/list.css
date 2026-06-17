@@ -1,0 +1,110 @@
+/* 기본 폰트 및 배경 */
+body { font-family: 'Pretendard', -apple-system, sans-serif; background-color: #fff; margin: 0; }
+
+.history-container { max-width: 800px; margin: 60px auto; padding: 0 20px; }
+.title-area h2 { color: var(--active-color); font-size: 30px; font-weight: 800; margin-bottom: 10px; }
+.title-area p { color: #888; margin-bottom: 50px; }
+
+/* 카드 스타일 */
+.history-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* 세로 중앙 정렬 */
+    padding: 30px 40px;
+    margin-bottom: 20px;
+    border: 1px solid #eee;
+    border-radius: 25px; /* 둥근 테두리 */
+    background-color: #fff;
+    position: relative;
+    transition: all 0.2s;
+}
+
+.history-card:hover {
+    border-color: var(--active-color);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+/* 카드 왼쪽 정보 */
+.order-no { color: var(--active-color); font-size: 14px; font-weight: bold; }
+.plan-title { font-size: 24px; font-weight: 800; margin: 8px 0; }
+.phone-num { color: #333; font-weight: 500; }
+
+/* [핵심] 카드 오른쪽: 글자 위치 조정 영역 */
+.card-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; /* 모든 요소를 오른쪽 끝으로 밀기 */
+    text-align: right;
+    margin-right: 20px;    /* 화살표와의 간격 */
+    flex-grow: 1;          /* 남은 공간을 차지해서 오른쪽으로 밀리게 함 */
+}
+
+/* 상태 배지 공통 */
+.status-badge {
+    display: inline-block;
+    padding: 7px 18px;
+    border-radius: 20px;
+    color: #fff;
+    font-size: 13px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* 상태별 색상 */
+.waiting { background-color: #999; }      /* 검토 중 */
+.complete { background-color: #28a745; }   /* 승인 완료 */
+.rejected { background-color: #dc3545; }   /* 신청 반려 */
+
+.process-date { font-size: 14px; color: #666; }
+.reject-reason { font-size: 13px; color: #dc3545; margin-top: 5px; }
+
+/* 화살표 */
+.arrow-icon { display: flex; align-items: center; }
+
+/* 하단 주의사항 */
+.notice-text { font-size: 13px; color: #999; margin-top: 40px; }
+
+.sort-box {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+}
+
+.sort-select {
+    right: 0;
+    padding: 4px 8px;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+#page-area{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    margin-top:40px;
+}
+
+#page-area div{
+    min-width:32px;
+    height:32px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    font-size:14px;
+    font-weight:500;
+    color:#555;
+
+    cursor:pointer;
+    border-radius:8px;
+
+    transition:all 0.15s;
+    &:hover{
+        border: 1px solid var(--active-color);
+    }
+}
+/* 이름 강조 스타일 */
+.highlight {
+    color: var(--active-color);
+    font-weight: bold;
+}

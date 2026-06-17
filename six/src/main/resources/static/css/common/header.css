@@ -1,0 +1,324 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Pretendard',sans-serif;
+}
+
+:root {
+  --active-color: #ff6a00;
+}
+
+.header{
+width:100%;
+height:70px;
+background:#fff;
+border-bottom:1px solid #e5e5e5;
+display:flex;
+align-items:center;
+justify-content:space-between;
+padding:0 40px;
+position:relative;
+z-index:100;
+overflow:visible;
+}
+
+.logo img{
+height:70px;
+}
+
+.nav{
+display:flex;
+align-items:center;
+gap:40px;
+}
+
+.nav-item{
+position:relative;
+height:70px;
+display:flex;
+align-items:center;
+}
+
+.nav a{
+text-decoration:none;
+color:#555;
+font-size:16px;
+position:relative;
+}
+
+.nav a:hover{
+color:var(--active-color);
+}
+
+.nav a::after{
+content:"";
+position:absolute;
+left:0;
+bottom:-8px;
+width:0;
+height:2px;
+background: var(--active-color);
+transition:0.3s;
+}
+
+.nav a:hover::after{
+width:100%;
+}
+
+/* mega menu */
+.nav-item.mega-parent {
+  position: static;  /* ← 핵심 수정! */
+}
+
+/* 2. mega-menu: 1200px 고정 제거 → 콘텐츠 크기에 맞게 자동 */
+.mega-menu {
+  position: absolute;
+  left: 50%;                    /* ← nav-item 중앙 기준 */
+  transform: translateX(-50%);  /* ← 메뉴 자신도 중앙 정렬 */
+  top: 70px;
+  width: max-content;           /* ← 콘텐츠 너비만큼 자동 확장 */
+  min-width: 180px;
+  background: #fff;
+  border-top: 2px solid var(--active-color);
+  border-bottom: 1px solid #eee;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.10);
+  display: none;
+}
+
+.mega-parent:hover .mega-menu{
+display:block;
+}
+
+.mega-inner {
+  display: flex;
+  gap: 50px;
+  padding: 30px 35px;
+}
+
+.mega-column{
+display:flex;
+flex-direction:column;
+min-width:150px;
+gap:12px;
+}
+
+.mega-column h4{
+font-size:15px;
+font-weight:600;
+margin-bottom:10px;
+}
+
+.mega-column a{
+text-decoration:none;
+color:#555;
+font-size:14px;
+}
+
+.mega-column a:hover{
+color:var(--active-color);
+}
+
+/* user menu */
+
+.user-actions{
+display:flex;
+align-items:center;
+gap:20px;
+}
+
+.icon-btn{
+cursor:pointer;
+font-size:24px;
+color:#333;
+}
+
+.icon-black{
+    cursor:pointer;
+    font-size:28px;
+    color: #000;
+}
+
+.user-menu-container{
+position:relative;
+height:70px;
+display:flex;
+align-items:center;
+}
+
+.user-icon-group{
+display:flex;
+align-items:center;
+cursor:pointer;
+}
+
+.expand-more{
+font-size:18px;
+transition:transform .3s;
+}
+
+.user-menu-container:hover .expand-more{
+transform:rotate(180deg);
+}
+
+.dropdown-content{
+display:none;
+position:absolute;
+top:70px;
+right:0;
+background:#fff;
+min-width:260px;
+box-shadow:0 8px 16px rgba(0,0,0,0.1);
+border:1px solid #eee;
+}
+
+.user-menu-container:hover .dropdown-content{
+display:block;
+}
+
+.menu-item{
+padding:15px 20px;
+display:block;
+text-decoration:none;
+color:#333;
+font-size:14px;
+}
+
+.menu-item:hover{
+background:#f9f9f9;
+}
+
+.menu-icon-item{
+display:flex;
+align-items:center;
+gap:12px;
+padding:12px 20px;
+text-decoration:none;
+color:#666;
+}
+
+.menu-icon-item:hover{
+background:#f9f9f9;
+}
+
+.divider{
+height:1px;
+background:#eee;
+margin:5px 0;
+}
+
+/* 로그인 정보 영역 */
+.user-profile-header{
+display:flex;
+align-items:center;
+justify-content:space-between;
+padding:15px 20px;
+}
+
+/* 이름 영역 */
+.user-name-info{
+font-size:14px;
+color:#333;
+line-height:1.4;
+}
+
+/* 로그아웃 버튼 */
+.logout-btn{
+background:none;
+border:1px solid #ddd;
+padding:4px 10px;
+font-size:12px;
+border-radius:6px;
+cursor:pointer;
+color:#555;
+transition:0.2s;
+}
+
+.logout-btn:hover{
+background:#f5f5f5;
+border-color:#ccc;
+}
+
+/* 전체 드롭다운 */
+.search-dropdown {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    border-top: 1px solid #eee;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+
+    transform: translateY(-20px);
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.3s ease;
+
+    z-index: 999;
+}
+
+/* 활성화 */
+.search-dropdown.active {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* 내부 */
+.search-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+/* 상단 input */
+.search-top {
+    display: flex;
+    align-items: center;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+}
+
+.search-top input {
+    flex: 1;
+    font-size: 28px;
+    border: none;
+    outline: none;
+}
+
+.search-top span {
+    font-size: 28px;
+    cursor: pointer;
+}
+
+/* 콘텐츠 */
+.search-body {
+    display: flex;
+    gap: 100px;
+}
+
+/* 제목 */
+.search-body h4 {
+    font-size: 14px;
+    color: #999;
+    margin-bottom: 15px;
+}
+
+/* 리스트 */
+.search-body li {
+    font-size: 16px;
+    margin-bottom: 12px;
+    cursor: pointer;
+}
+
+.search-body li:hover {
+    color: var(--active-color);
+}
+.search-dropdown::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.2);
+    pointer-events: none;
+}

@@ -1,0 +1,124 @@
+/* 기본 설정 */
+body {
+    font-family: 'Pretendard', sans-serif;
+    letter-spacing: -0.02em;
+    color: #333;
+}
+
+.main-container {
+    max-width: 1100px;
+    margin: 80px auto;
+    padding: 0 20px;
+}
+
+/* 제목 영역: 왼쪽 정렬 */
+.title-area {
+    text-align: left;
+    margin-bottom: 60px;
+}
+
+.main-title {
+    color: #FF7E41;
+    font-size: 34px; /* 살짝 키움 */
+    font-weight: 800;
+    margin-bottom: 12px;
+}
+
+.sub-title {
+    font-size: 18px;
+    color: #666;
+    font-weight: 500;
+}
+
+/* --- 센스 있는 날짜 선택기 (밑줄 스타일) --- */
+.date-selector-container {
+    text-align: center;
+    margin-bottom: 70px;
+}
+
+.date-underline-view {
+    display: inline-flex;
+    align-items: center;
+    position: relative;
+    padding: 10px 20px;
+}
+
+.current-date {
+    position: relative;
+    margin: 0 40px;
+}
+
+.date-text {
+    font-size: 28px; /* 날짜 글씨 키움 */
+    font-weight: 800;
+    color: #222;
+    z-index: 2;
+    position: relative;
+}
+
+/* 센스 있는 하이라이트 밑줄 */
+.accent-line {
+    position: absolute;
+    bottom: 2px;
+    left: -5%;
+    width: 110%;
+    height: 12px;
+    background-color: var(--active-color);
+    opacity: 0.2; /* 형광펜 느낌의 연한 밑줄 */
+    z-index: 1;
+    border-radius: 4px;
+}
+
+/* 화살표 액션 강화 */
+.arrow-btn {
+    background: none;
+    border: none;
+    color: var(--active-color);
+    font-size: 28px;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    display: flex;
+    align-items: center;
+}
+
+.arrow-btn:hover {
+    transform: scale(1.4) translateX(5px); /* 오른쪽 화살표는 오른쪽으로 살짝 이동 */
+    color: var(--active-color);
+}
+
+.arrow-btn.left:hover {
+    transform: scale(1.4) translateX(-5px); /* 왼쪽 화살표는 왼쪽으로 살짝 이동 */
+}
+
+/* --- 테이블 스타일 (글자 크기 업) --- */
+.usage-table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+.usage-table thead th {
+    color: var(--active-color);
+    font-size: 19px; /* 헤더 살짝 업 */
+    font-weight: 800;
+    padding: 25px 0;
+    border-bottom: 3px solid var(--active-color);
+    text-align: center;
+}
+
+.usage-table tbody td {
+    color: #444;
+    font-size: 18px; /* 본문 16px -> 18px로 상향 */
+    font-weight: 600;
+    padding: 35px 0; /* 간격도 더 시원하게 */
+    border-bottom: 1px solid #f2f2f2;
+    text-align: center;
+}
+
+.phone-num { font-weight: 800; color: #222; }
+.plan-name { font-weight: 800; color: var(--active-color); }
+
+.usage-table tbody tr:hover {
+    background-color: #fffaf7;
+    cursor: default;
+}

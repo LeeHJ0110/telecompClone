@@ -1,0 +1,170 @@
+
+/* ===== 공지사항 영역 ===== */
+
+.news-wrap{
+width:1100px;
+margin:50px auto;
+}
+
+/* 상단 탭 */
+
+.news-tabs{
+display:flex;
+gap:40px;
+font-size:20px;
+border-bottom:1px solid #ddd;
+padding-bottom:15px;
+}
+
+.news-tabs span{
+cursor:pointer;
+color:#666;
+}
+
+.news-tabs .active{
+color:#DE6C25;
+font-weight:600;
+border-bottom:3px solid #DE6C25;
+padding-bottom:12px;
+}
+
+/* 검색 */
+
+.news-search{
+display:flex;
+justify-content:flex-end;
+align-items:center;
+gap:15px;
+margin:25px 0;
+}
+
+.news-search select{
+border:none;
+border-bottom:1px solid #333;
+padding:5px;
+background:none;
+}
+
+.news-search input{
+border:none;
+border-bottom:1px solid #333;
+padding:6px 10px;
+width:220px;
+background:none;
+}
+
+.news-search input:focus{
+outline:none;
+}
+
+/* 테이블 */
+
+.news-table{
+width:100%;
+border-collapse:collapse;
+background:#fff;
+}
+
+.news-table thead{
+background:#f0f0f0;
+}
+
+.news-table th{
+text-align:left;
+padding:15px;
+font-size:14px;
+border-bottom:1px solid #ddd;
+}
+
+.news-table td{
+padding:18px 15px;
+border-bottom:1px solid #eee;
+font-size:14px;
+}
+
+.news-table tbody tr:hover{
+background:#fafafa;
+}
+
+.news-category{
+width:200px;
+color:#666;
+}
+
+.news-badge{
+display:inline-block;
+font-size:11px;
+padding:2px 6px;
+border-radius:10px;
+margin-right:8px;
+border:1px solid #ff4b8b;
+color:#ff4b8b;
+}
+
+.news-date{
+text-align:right;
+color:#666;
+width:120px;
+}
+
+.news-check{
+text-align:center;
+color:#666;
+width:100px;
+}
+
+/* 페이징 */
+
+.news-pagination{
+display:flex;
+justify-content:center;
+gap:15px;
+margin-top:30px;
+font-size:14px;
+}
+
+.news-pagination span{
+cursor:pointer;
+color:#666;
+}
+
+.news-pagination .active{
+background:#333;
+color:#fff;
+padding:4px 10px;
+border-radius:4px;
+}
+
+.notice-btn-area{
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.notice-btn{
+    padding:10px 40px;
+    border:1px solid #ccc;
+    border-radius:30px;
+    background:#fff;
+    cursor:pointer;
+    font-size:14px;
+}
+
+.notice-btn:hover{
+    background:#f5f5f5;
+}
+.status-complete{
+background:#5A6F8E;
+color:white;
+padding:3px 10px;
+border-radius:10px;
+font-size:12px;
+}
+
+.status-wait{
+background:#FFD8A8;
+color:#222;
+padding:3px 10px;
+border-radius:10px;
+font-size:12px;
+}

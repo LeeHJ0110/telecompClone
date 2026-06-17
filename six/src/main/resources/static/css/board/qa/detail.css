@@ -1,0 +1,178 @@
+/* ===== 공지 상세 ===== */
+
+.notice-wrap{
+width:1100px;
+margin:60px auto;
+}
+
+.notice-title{
+font-size:28px;
+font-weight:600;
+margin-bottom:30px;
+}
+
+.notice-header{
+border-top:2px solid #222;
+border-bottom:1px solid #ddd;
+padding:20px 15px;
+background:#FFD8A8;
+display:flex;
+justify-content:space-between;
+align-items:center;
+font-size:15px;
+}
+
+.notice-header-answer{
+border-top:2px solid #222;
+border-bottom:1px solid #ddd;
+padding:20px 15px;
+background:#5A6F8E;
+display:flex;
+justify-content:space-between;
+align-items:left;
+font-size:15px;
+}
+
+.notice-date{
+color:#666;
+font-size:13px;
+}
+
+.notice-date-answer{
+color:#222;
+font-size:13px;
+}
+
+.notice-content{
+padding:40px 15px;
+line-height:1.8;
+font-size:14px;
+border-bottom:1px solid #ddd;
+}
+
+/* ===== 이전글 다음글 ===== */
+
+.notice-nav{
+border-bottom:1px solid #ddd;
+}
+
+.notice-nav-item{
+display:flex;
+gap:30px;
+padding:15px;
+border-top:1px solid #eee;
+font-size:14px;
+}
+
+.notice-nav-label{
+width:80px;
+color:#666;
+}
+
+.notice-nav a{
+text-decoration:none;
+color:#222;
+}
+
+.notice-nav a:hover{
+color:var(--active-color);
+}
+
+/* ===== 목록 버튼 ===== */
+
+.notice-btn-area{
+text-align:center;
+margin-top:40px;
+}
+
+.notice-btn{
+padding:10px 40px;
+border:1px solid #ccc;
+border-radius:30px;
+background:#fff;
+cursor:pointer;
+font-size:14px;
+}
+.notice-btn:hover{
+background:#f5f5f5;
+}
+
+#reply-list-area{
+margin-top:40px;
+border-top:1px solid #ddd;
+}
+
+/* 댓글 하나 */
+.reply-item{
+padding:20px 15px;
+border-bottom:1px solid #eee;
+}
+
+/* 댓글 헤더 */
+.reply-header{
+display:flex;
+justify-content:space-between;
+margin-bottom:10px;
+font-size:14px;
+}
+
+/* 작성자 */
+.reply-writer{
+font-weight:600;
+color:#222;
+}
+
+/* 관리자 댓글 강조 */
+.reply-writer.admin{
+color:#5A6F8E;
+}
+
+/* 날짜 */
+.reply-date{
+font-size:13px;
+color:#666;
+}
+
+/* 댓글 내용 */
+.reply-content{
+font-size:14px;
+line-height:1.7;
+color:#333;
+}
+
+/* ===== 댓글 입력 ===== */
+
+#reply-insert-area{
+margin-top:30px;
+display:flex;
+gap:10px;
+}
+
+#reply-insert-area textarea{
+flex:1;
+height:80px;
+padding:12px;
+border:1px solid #ddd;
+border-radius:5px;
+font-size:14px;
+resize:none;
+}
+
+#reply-insert-area textarea:focus{
+outline:none;
+border-color:#5A6F8E;
+}
+
+.reply-btn{
+padding:0 20px;
+background:#5A6F8E;
+color:#fff;
+border:none;
+border-radius:5px;
+cursor:pointer;
+font-size:14px;
+}
+
+.reply-btn:hover{
+background:#46586f;
+}

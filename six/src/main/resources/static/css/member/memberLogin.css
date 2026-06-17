@@ -1,0 +1,143 @@
+/* memberLogin.css */
+
+/* 전체 배경 및 정렬 */
+main {
+    text-align: center;
+    padding-top: 80px; /* 상단 여백 조금 더 넉넉하게 */
+    background-color: #fafafa; /* 아주 연한 회색 배경으로 박스가 돋보이게 */
+    min-height: calc(100vh - 70px); /* 헤더 제외 전체 화면 높이 */
+}
+
+h1 {
+    margin-bottom: 30px;
+    color: #333;
+    font-size: 28px;
+}
+
+/* 로그인 박스 (첫 번째 사진처럼 깔끔한 카드 형태) */
+#login-area {
+    background-color: #ffffff;
+    border: 1px solid #eaeaea; /* 시커먼 선 대신 연한 회색 선 */
+    border-radius: 12px; /* 모서리를 둥글게 */
+    width: 400px; /* 고정 너비 (화면이 작아져도 너무 안 찌그러지게) */
+    max-width: 90%; /* 모바일 화면 대응 */
+    margin: 0 auto;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); /* 은은한 그림자 효과 */
+    padding: 40px 20px;
+}
+
+/* 폼 내부 세로 정렬 및 간격 조절 */
+#login-area form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px; /* input과 button 사이의 간격 */
+}
+
+/* 입력창 (아이디, 비밀번호) */
+#login-area input[type="text"],
+#login-area input[type="password"] {
+    width: 100%;
+    max-width: 320px; /* 박스 안에서 꽉 차지 않게 최대 너비 설정 */
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px; /* 입력창 모서리 둥글게 */
+    font-size: 15px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+/* 입력창 클릭 시 주황색 테두리 하이라이트 */
+#login-area input[type="text"]:focus,
+#login-area input[type="password"]:focus {
+    border-color: var(--active-color);
+}
+
+/* 기본 버튼 (로그인 - 주황색 꽉 찬 버튼) */
+#login-area input[type="button"] {
+    width: 100%;
+    max-width: 320px;
+    padding: 15px;
+    background-color: var(--active-color); /* 헤더와 동일한 메인 주황색 */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 10px; /* 입력창과 버튼 사이를 조금 더 띄움 */
+}
+
+/* 버튼 마우스 오버 시 조금 더 진한 주황색 */
+#login-area input[type="button"]:hover {
+    background-color: var(--active-color);
+}
+
+/* 📍 [수정됨] 회원가입 버튼 (색상을 반전시켜서 로그인 버튼과 확실히 구분) */
+#login-area input[type="button"].join-btn {
+    background-color: #fff;
+    color: var(--active-color);
+    border: 1px solid var(--active-color);
+    margin-top: 0;
+}
+
+#login-area input[type="button"].join-btn:hover {
+    background-color: #fff3eb; /* 연한 주황색 배경 */
+}
+
+
+/* ============================================================== */
+/* 📍 [추가됨] 여기서부터 새롭게 추가된 하단 링크 및 직원 로그인 디자인입니다! */
+/* ============================================================== */
+
+/* --- ID/PW 찾기 링크 영역 --- */
+.link-area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+    font-size: 13px;
+    color: #888;
+    width: 100%;
+}
+
+.link-area a {
+    color: #888;
+    text-decoration: none;
+    margin: 0 5px;
+    transition: color 0.2s;
+}
+
+.link-area a:hover {
+    color: var(--active-color); /* 마우스 올리면 메인 주황색으로 변경 */
+    text-decoration: underline;
+}
+
+/* ID/PW 사이 구분선 */
+.link-area .divider {
+    margin: 0 10px;
+    color: #ddd;
+    font-size: 12px;
+}
+
+/* --- 직원 로그인 링크 영역 --- */
+.employee-link-area {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #eee; /* 메인 로그인 폼과 분리하는 연한 선 */
+    text-align: center;
+}
+
+.employee-link {
+    font-size: 13px;
+    color: #aaa;
+    text-decoration: none;
+    transition: color 0.2s;
+    display: inline-block;
+}
+
+.employee-link:hover {
+    color: #555; /* 주황색보다는 차분한 진회색으로 하이라이트 */
+    text-decoration: underline;
+}

@@ -1,0 +1,158 @@
+/* 컨테이너 */
+.confirm-container {
+    max-width: 800px;
+    margin: 60px auto;
+    padding: 0 20px;
+    font-family: 'Pretendard', sans-serif; /* 폰트 통일 */
+}
+
+.title-area {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.title-area h2 {
+    color: var(--active-color);
+    font-size: 32px;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+/* 요금제 카드 공통 */
+.plan-card {
+    position: relative; /* 배지 위치 조절용 */
+    background: #FFFFFF;
+    border: 1px solid #EAEAEA;
+    border-radius: 25px;
+    padding: 40px 50px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    margin-bottom: 20px;
+}
+
+/* 상단 정보 (사용중 배지 & 전화번호) */
+.badge-usage {
+    position: absolute;
+    top: 30px;
+    left: 45px;
+    background: var(--active-color);
+    color: #fff;
+    padding: 5px 15px;
+    border-radius: 15px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.phone-number {
+    position: absolute;
+    top: 30px;
+    right: 45px;
+    color: var(--active-color);
+    font-weight: bold;
+    font-size: 18px;
+}
+
+/* 요금제 이름 */
+.plan-header h3 {
+    font-size: 26px;
+    font-weight: 800;
+    margin-top: 25px;
+    margin-bottom: 35px;
+}
+
+/* [핵심] 가로 배치를 위한 flex */
+.plan-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #f0f0f0;
+    padding-top: 30px;
+}
+
+.detail-item {
+    text-align: center;
+    flex: 1;
+}
+
+.detail-label {
+    display: block;
+    color: #888;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.detail-value {
+    font-size: 19px;
+    font-weight: 800;
+    color: #222;
+}
+
+.detail-value.price {
+    color: var(--active-color);
+    font-size: 24px;
+}
+
+/* 카드 하단 날짜 정보 */
+.plan-info-footer {
+    margin-top: 30px;
+    font-size: 12px;
+    color: #aaa;
+    line-height: 1.6;
+}
+
+/* 화살표 */
+.arrow-indicator {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+    color: var(--active-color);
+    animation: bounce 2s infinite;
+}
+
+/* 변경할 요금제 카드 특화 */
+.plan-card.target {
+    border: 2px solid #f0f0f0;
+}
+
+.badge-change {
+    background: #999;
+    color: #fff;
+    font-size: 13px;
+    padding: 4px 12px;
+    border-radius: 20px;
+    margin-left: 10px;
+    cursor: pointer;
+    font-weight: normal;
+}
+
+/* 선택 버튼 */
+.btn-select-orange {
+    background: #FF7E41;
+    color: #fff;
+    border: none;
+    border-radius: 12px;
+    padding: 15px 30px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(255, 126, 65, 0.3);
+}
+
+/* 하단 공지 */
+.change-notice {
+    margin-top: 40px;
+    padding: 25px;
+    background: #F8F8F8;
+    border-radius: 15px;
+}
+
+.change-notice p {
+    font-size: 13px;
+    color: #777;
+    margin-bottom: 6px;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+    40% {transform: translateY(-8px);}
+    60% {transform: translateY(-4px);}
+}

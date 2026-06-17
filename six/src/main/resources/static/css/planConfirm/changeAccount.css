@@ -1,0 +1,222 @@
+body {
+    font-family: 'Pretendard', sans-serif;
+    background-color: #ffffff;
+    letter-spacing: -0.02em; /* 글자가 더 꽉 차 보이게 조절 */
+}
+
+.account-container {
+    max-width: 800px;
+    margin: 60px auto;
+    padding: 20px;
+}
+
+/* 제목 섹션 - 글씨 크기 및 두께 강화 */
+.main-title {
+    color: var(--active-color);
+    font-size: 32px; /* 28px -> 32px */
+    font-weight: 800; /* 더 진하게 */
+    margin-bottom: 10px;
+}
+
+.sub-title {
+    font-size: 17px; /* 16px -> 17px */
+    color: #555; /* 약간 더 진하게 */
+    font-weight: 500;
+}
+
+/* 폰 번호 탭 - 더 둥글고 선명하게 */
+.phone-tabs {
+    display: flex;
+    gap: 12px;
+    margin: 40px 0 30px 0;
+}
+
+.tab-btn {
+    padding: 10px 25px;
+    border-radius: 30px; /* 더 둥글게 */
+    border: 2px solid #eee; /* 테두리 2px로 강화 */
+    background: #fff;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 600; /* 글씨 진하게 */
+    color: #666;
+    transition: 0.2s;
+}
+
+.tab-btn.active {
+    background-color: var(--active-color);
+    color: white;
+    border-color: var(--active-color);
+}
+
+/* 결제 정보 카드 - 테두리 두께 및 둥글기 강조 */
+.payment-card {
+    background-color: #FFF8F1; /* 배경색 살짝 더 밝게 조정 */
+    border: 3px solid #FFAB91; /* 테두리 1px -> 3px로 대폭 강화 */
+    border-radius: 20px; /* 12px -> 20px 더 둥글게 */
+    padding: 45px 35px;
+    margin-bottom: 20px;
+}
+
+.card-name {
+    color: var(--active-color);
+    font-size: 22px; /* 19px -> 22px */
+    font-weight: 800;
+    margin-bottom: 15px;
+}
+
+.card-number {
+    font-size: 20px; /* 17px -> 20px */
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: #333;
+}
+
+/* 변경 버튼 - 더 크고 둥글게 */
+.change-btn {
+    width: 100%;
+    padding: 18px;
+    background-color: #EAEAEA;
+    border: none;
+    border-radius: 12px; /* 6px -> 12px */
+    font-size: 17px; /* 15px -> 17px */
+    font-weight: 800;
+    color: #444;
+    cursor: pointer;
+    margin-bottom: 45px;
+}
+
+/* 안내사항 - 폰트 크기 조정 */
+.info-list {
+    list-style: none;
+    padding: 25px 0 0 0;
+    border-top: 2px solid #f5f5f5;
+}
+
+.info-list li {
+    font-size: 14px; /* 12px -> 14px */
+    color: #666;
+    font-weight: 500;
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+/* --- 모달 전체 배경 (기본 숨김) --- */
+.modal-overlay {
+    display: none;       /* JS에서 flex로 변경하며 나타남 */
+    position: fixed;     
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* 배경을 조금 더 어둡게 해서 집중도 상향 */
+    z-index: 9999;       /* 헤더보다 위에 오도록 */
+    justify-content: center; 
+    align-items: center;     
+}
+
+/* --- 모달 하얀색 박스 --- */
+.modal-content {
+    background-color: #fff;
+    padding: 40px 30px;
+    border-radius: 25px; /* 테마에 맞춰 더 둥글게 */
+    width: 90%;
+    max-width: 420px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    border: 2px solid #FFAB91; /* 카드 테두리와 통일감 */
+    animation: modalFadeIn 0.3s ease-out; /* 등장 애니메이션 */
+}
+
+@keyframes modalFadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* --- 모달 내부 제목 --- */
+.modal-title {
+    color: var(--active-color);
+    font-size: 24px;
+    font-weight: 800;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+/* --- 폼 아이템 (라벨 + 입력창) --- */
+.form-item {
+    margin-bottom: 25px;
+}
+
+.modal-label {
+    display: block;
+    font-size: 15px;
+    font-weight: 700;
+    color: #444;
+    margin-bottom: 10px;
+    margin-left: 5px;
+}
+
+/* --- 입력창 & 셀렉트박스 공통 스타일 --- */
+.input-main {
+    width: 100%;
+    padding: 15px;
+    border-radius: 12px;
+    border: 2px solid #eee;
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+    transition: 0.2s;
+    background-color: #f9f9f9;
+    box-sizing: border-box; /* 패딩 때문에 박스 깨짐 방지 */
+}
+
+.input-main:focus {
+    border-color: var(--active-color);
+    background-color: #fff;
+    outline: none;
+    box-shadow: 0 0 8px rgba(255, 126, 65, 0.2);
+}
+
+/* --- 모달 하단 버튼 영역 --- */
+.modal-footer {
+    display: flex;
+    gap: 12px;
+    margin-top: 35px;
+}
+
+/* 취소 버튼 */
+.btn-modal-close {
+    flex: 1;
+    padding: 15px;
+    border: none;
+    border-radius: 12px;
+    background-color: #EAEAEA;
+    color: #666;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.btn-modal-close:hover {
+    background-color: #ddd;
+}
+
+/* 정보 반영 버튼 (오렌지 포인트) */
+.btn-modal-save {
+    flex: 2; /* 반영 버튼을 조금 더 길게 */
+    padding: 15px;
+    border: none;
+    border-radius: 12px;
+    background-color: var(--active-color);
+    color: white;
+    font-size: 16px;
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.2s;
+    box-shadow: 0 4px 10px rgba(255, 126, 65, 0.3);
+}
+
+.btn-modal-save:hover {
+    background-color: var(--active-color);
+    transform: translateY(-2px);
+}

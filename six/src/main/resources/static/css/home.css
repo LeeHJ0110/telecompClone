@@ -1,0 +1,169 @@
+/* 홈 전체 배경 */
+
+.home-page{
+background:#000;
+}
+
+/* header override */
+
+.home-page .header{
+background:#000;
+border-bottom:1px solid rgba(255,255,255,0.1);
+}
+
+/* 메뉴 글자 */
+
+.home-page .nav a{
+color:#fff;
+}
+
+.home-page .nav a:hover{
+color:var(--active-color);
+}
+
+/* 아이콘 */
+
+.home-page .icon-btn{
+color:#fff;
+}
+
+.home-page .material-symbols-outlined{
+color:#fff;
+}
+
+/* mega menu는 흰색 유지 */
+
+.home-page .mega-menu{
+background:#fff;
+}
+
+.home-page .mega-column a{
+color:#333;
+}
+
+/* HERO */
+
+.home-hero{
+height:850px;
+display:flex;
+color:#fff;
+align-items:center;
+justify-content:center;
+}
+
+.hero-inner{
+width:1400px;           /* 기존 1200 → 1400 */
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:120px;              /* 텍스트와 이미지 간격 */
+}
+
+.hero-left{
+max-width:700px;       /* 기존 500 → 700 */
+}
+
+.hero-title{
+font-size:64px;
+font-weight:700;
+margin-bottom:20px;
+white-space:nowrap;    /* 한줄 유지 */
+}
+
+.hero-desc{
+font-size:20px;
+line-height:1.6;
+margin-bottom:30px;
+}
+
+.hero-btn{
+background:#ff008c;
+border:none;
+padding:14px 36px;
+border-radius:30px;
+font-size:16px;
+color:white;
+cursor:pointer;
+}
+
+.hero-btn:hover{
+opacity:0.9;
+}
+
+/* 이미지 */
+
+.hero-right img{
+width:850px;
+}
+
+/* 로고 색 반전 */
+
+.home-page .logo img{
+content:url("/img/logo_black.png");
+}
+
+.hero-slider{
+position:relative;
+overflow:hidden;
+width:100%;
+}
+
+.hero-track{
+display:flex;
+transition:transform .6s ease;
+}
+
+.hero-slide{
+min-width:100%;
+display:flex;
+justify-content:center;
+}
+
+/* 화살표 */
+
+.hero-prev,
+.hero-next{
+position:absolute;
+top:50%;
+transform:translateY(-50%);
+font-size:50px;
+color:white;
+cursor:pointer;
+padding:10px;
+z-index:10;
+}
+
+.hero-prev{
+left:40px;
+}
+
+.hero-next{
+right:40px;
+}
+
+/* dots */
+
+.hero-dots{
+position:absolute;
+bottom:40px;
+left:50%;
+transform:translateX(-50%);
+display:flex;
+gap:10px;
+}
+
+.hero-dot{
+width:10px;
+height:10px;
+border-radius:50%;
+background:#777;
+cursor:pointer;
+}
+
+.hero-dot.active{
+background:white;
+}
+
+.home-page .dropdown-content .material-symbols-outlined{
+color:#666;
+}

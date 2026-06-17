@@ -1,0 +1,317 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:"Noto Sans KR", sans-serif;
+}
+
+body{
+    background:#f7f8fc;
+    color:#1f2937;
+}
+
+/* 전체 래퍼 */
+.news-wrap{
+    width:1100px;
+    margin:50px auto 70px;
+    background:#ffffff;
+    border-radius:24px;
+    padding:38px 36px 30px;
+    box-shadow:0 10px 35px rgba(15, 23, 42, 0.06);
+}
+
+/* 상단 제목 */
+.news-tabs{
+    display:flex;
+    gap:40px;
+    font-size:28px;
+    font-weight:700;
+    border-bottom:1px solid #e5e7eb;
+    padding-bottom:16px;
+    margin-bottom:28px;
+}
+
+.news-tabs span{
+    cursor:default;
+    color:#0f172a;
+}
+
+.news-tabs .active{
+    color:#0f172a;
+    font-weight:700;
+    border-bottom:3px solid var(--active-color);
+    padding-bottom:12px;
+}
+
+/* 카테고리 탭 */
+.faq-tabs{
+    display:flex;
+    gap:16px;
+    flex-wrap:wrap;
+    border-bottom:1px solid #e5e7eb;
+    padding-bottom:18px;
+    margin-bottom:28px;
+}
+
+.faq-tabs span{
+    cursor:pointer;
+    color:var(--active-color);
+    font-size:15px;
+    font-weight:500;
+    padding:11px 20px;
+    border-radius:999px;
+    transition:all 0.2s ease;
+    background:#f8fafc;
+    border:1px solid transparent;
+}
+
+.faq-tabs span:hover{
+    color:var(--active-color);
+    background:#eff6ff;
+    border-color:#bfdbfe;
+}
+
+.faq-tabs .active{
+    color:#ffffff;
+    font-weight:600;
+    background:var(--active-color);
+    border:1px solid var(--active-color);
+    box-shadow:0 6px 14px rgba(30, 58, 138, 0.18);
+}
+
+/* 리스트 영역 */
+main{
+    width:100%;
+}
+
+/* 공통 행 */
+.confirm-row{
+    display:grid;
+    grid-template-columns: 1.2fr 1.5fr 1.8fr 1fr;
+    align-items:center;
+    /* justify-items:center; */
+    column-gap:0px;
+    padding:18px 24px;
+    border-bottom:1px solid #edf0f5;
+    font-size:15px;
+}
+
+.confirm-row.plan{
+    grid-template-columns: 1.2fr 1.5fr 1.8fr 1fr;
+}
+
+/* 헤더 */
+.confirm-row.header{
+    background:#f8fafc;
+    color:#0f172a;
+    font-weight:700;
+    font-size:15px;
+    border:1px solid #e5e7eb;
+    border-bottom:1px solid #dbe2ea;
+    border-radius:16px 16px 0 0;
+    margin-bottom:0;
+
+    > div:nth-child(1) {
+    color: var(--active-color) !important; /* 변수에 담긴 파란색 적용 */
+    }
+}
+
+.confirm-row.header > div{
+    text-align:center;
+    width:100%;
+}
+
+/* 데이터 행 */
+.confirm-row:not(.header){
+    background:#ffffff;
+    transition:background 0.2s ease;
+}
+
+.confirm-row:not(.header):hover{
+    background:#f1f5ff;
+}
+
+/* 셀 공통 */
+.confirm-row > div{
+    width:100%;
+    text-align:center;
+    word-break:keep-all;
+    line-height:1.6;
+    display:flex;
+    /* justify-content:center; */
+    align-items:center;
+}
+
+/* 이름 */
+.confirm-row > div:nth-child(1){
+    font-weight:600;
+    color:#0f172a;
+}
+
+/* 날짜 */
+.confirm-row > div:nth-child(2){
+    color:var(--active-color);
+}
+
+/* 서비스명 */
+.confirm-row > div:nth-child(3){
+    color:var(--active-color);
+    font-weight:600;
+}
+
+/* 처리여부 */
+.confirm-row > div:last-child{
+    color:var(--active-color);
+}
+
+/* 요금제 3칸일 때도 가운데 정렬 유지 */
+.confirm-row.plan > div{
+    text-align:center;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+/* 상태 배지 */
+.status-badge{
+    display:inline-flex;
+    justify-content:center;
+    align-items:center;
+    min-width:74px;
+    text-align:center;
+    padding:7px 14px;
+    border-radius:999px;
+    font-size:13px;
+    font-weight:700;
+    background:#dbeafe;
+    color:var(--active-color);
+}
+
+/* 빈 목록 */
+.empty{
+    text-align:center;
+    padding:60px 20px;
+    color:#64748b;
+    font-size:15px;
+    background:#f8fafc;
+    border:1px solid #e5e7eb;
+    border-radius:16px;
+}
+
+/* 페이징 */
+.news-pagination{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:8px;
+    margin-top:32px;
+    font-size:14px;
+}
+
+#page-area{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:8px;
+    flex-wrap:wrap;
+}
+
+#page-area button{
+    min-width:38px;
+    height:38px;
+    padding:0 12px;
+    border:1px solid #d1d5db;
+    border-radius:12px;
+    background:#ffffff;
+    color:var(--active-color);
+    cursor:pointer;
+    font-size:14px;
+    font-weight:500;
+    transition:all 0.2s ease;
+}
+
+#page-area button:hover{
+    border-color:var(--active-color);
+    color:var(--active-color);
+    background:#eff6ff;
+}
+
+#page-area .active,
+#page-area button.active{
+    background:var(--active-color);
+    color:#ffffff;
+    border-color:var(--active-color);
+    box-shadow:0 4px 10px rgba(30, 58, 138, 0.2);
+}
+
+/* 기존 클래스 호환 */
+.news-search{
+    display:flex;
+    justify-content:flex-end;
+    align-items:center;
+    gap:15px;
+    margin:25px 0;
+}
+
+.news-search select,
+.news-search input{
+    border:1px solid #d1d5db;
+    border-radius:10px;
+    padding:10px 12px;
+    background:#fff;
+    color:#1f2937;
+}
+
+.news-search input:focus,
+.news-search select:focus{
+    outline:none;
+    border-color:var(--active-color);
+    box-shadow:0 0 0 3px rgba(30, 58, 138, 0.1);
+}
+
+.notice-btn-area{
+    text-align:center;
+    margin-top:40px;
+}
+
+.notice-btn{
+    padding:11px 36px;
+    border:1px solid #cbd5e1;
+    border-radius:999px;
+    background:#ffffff;
+    cursor:pointer;
+    font-size:14px;
+    color:#334155;
+    transition:all 0.2s ease;
+}
+
+.notice-btn:hover{
+    background:#eff6ff;
+    border-color:var(--active-color);
+    color:var(--active-color);
+}
+
+/* [수정] 날짜, 서비스명, 처리여부 색상을 검정색 계열로 통일 */
+
+/* 날짜 */
+.confirm-row:not(.header) > div:nth-child(2) {
+    color: #1f2937; /* 검정색 */
+    font-weight: 400; /* 날짜는 보통 굵기로 */
+}
+
+/* 서비스명(또는 요금제명) */
+.confirm-row:not(.header) > div:nth-child(3) {
+    color: #1f2937; /* 검정색 */
+    font-weight: 500; /* 약간의 강조 */
+}
+
+/* 마지막 칸 (전화번호/처리여부) */
+.confirm-row:not(.header) > div:last-child {
+    color: #1f2937; /* 검정색 */
+}
+
+/* (선택사항) 전화번호 배지의 배경색이 너무 진하다면 조정 */
+.status-badge {
+    background: #f1f5ff; /* 좀 더 연한 배경 */
+    color: #1e3a8a;      /* 글자는 기존 포인트 컬러 유지 또는 검정 */
+}

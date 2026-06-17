@@ -1,0 +1,62 @@
+.contract-page * { box-sizing: border-box; 
+    margin: 0; padding: 0; 
+    font-family: 'Pretendard', sans-serif; 
+}
+
+        body .contract-page { background-color: #f8f9fa; padding: 40px; }
+        
+        /* 헤더 영역 */
+        .page-header { 
+        display: flex; 
+        justify-content: space-between; 
+        align-items: center; 
+        max-width: 900px; 
+        margin: 0 auto 20px; 
+        }
+        .add-btn { background-color: #007bff; color: white; border: none; padding: 10px 20px; border-radius: 8px; cursor: pointer; font-weight: bold; }
+
+        /* 카드 컨테이너 */
+        .contract-list { max-width: 900px; margin: 0 auto; display: flex; flex-direction: column; gap: 16px; }
+
+        /* 개별 카드 스타일 */
+        .contract-card {
+            background: white;
+            border-radius: 12px;
+            border: 1px solid #e9ecef;
+            display: flex;
+            padding: 24px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            transition: transform 0.2s;
+        }
+        .contract-card:hover { transform: translateY(-2px); border-color: #dee2e6; }
+
+        /* 좌측 정보 영역 (이미지의 텍스트 부분) */
+        .info-section { flex: 1; border-right: 1px solid #eee; padding-right: 20px; }
+        
+        .badge { 
+            display: inline-block; padding: 4px 8px; border-radius: 4px; font-size: 12px; font-weight: bold; margin-bottom: 8px;
+            background-color: #ffefeb; color: #ff4d15; /* 이미지의 '인기' 뱃지 느낌 */
+        }
+        .category { color: #888; font-size: 13px; margin-bottom: 8px; }
+        .title { font-size: 22px; font-weight: 800; color: #222; margin-bottom: 4px; }
+        .subtitle { color: #555; font-size: 16px; margin-bottom: 16px; }
+        
+        .price-row { display: flex; align-items: baseline; gap: 8px; }
+        .main-benefit { font-size: 20px; font-weight: bold; color: #007bff; }
+        .sub-text { color: #999; font-size: 14px; }
+
+        /* 우측 액션 영역 (이미지의 버튼/상세 부분) */
+        .action-section { width: 280px; padding-left: 20px; display: flex; flex-direction: column; justify-content: space-between; }
+        
+        .detail-row { font-size: 14px; margin-bottom: 8px; color: #444; }
+        .detail-label { color: #888; width: 80px; display: inline-block; }
+        
+        .btn-group { display: flex; gap: 8px; margin-top: 15px; }
+        .btn { 
+            flex: 1; padding: 10px; border-radius: 20px; font-size: 14px; cursor: pointer; text-align: center; font-weight: 600;
+            border: 1px solid #ddd; background: white; transition: 0.2s;
+        }
+        .btn-edit { border-color: #ddd; color: #555; }
+        .btn-edit:hover { background: #f1f1f1; }
+        .btn-delete { border-color: #ffdada; color: #ff4d4d; }
+        .btn-delete:hover { background: #fff5f5; }

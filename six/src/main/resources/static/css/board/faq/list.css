@@ -1,0 +1,245 @@
+.news-wrap{
+    width:1100px;
+    margin:50px auto;
+}
+
+/* 상단 탭 */
+.news-tabs{
+    display:flex;
+    gap:40px;
+    font-size:20px;
+    border-bottom:1px solid #ddd;
+    padding-bottom:15px;
+}
+
+.news-tabs span{
+    cursor:pointer;
+    color:#666;
+}
+
+.news-tabs .active{
+    color:var(--active-color);
+    font-weight:600;
+    border-bottom:3px solid var(--active-color);
+    padding-bottom:12px;
+}
+
+/* 검색 영역 */
+.news-search{
+    display:flex;
+    justify-content:flex-end;
+    align-items:center;
+    gap:15px;
+    margin:25px 0;
+}
+
+.news-search select{
+    border:none;
+    border-bottom:1px solid #333;
+    padding:5px;
+    background:none;
+}
+
+.news-search input{
+    border:none;
+    border-bottom:1px solid #333;
+    padding:6px 10px;
+    width:220px;
+    background:none;
+}
+
+.news-search input:focus{
+    outline:none;
+}
+
+/* 테이블 */
+.news-table{
+    width:100%;
+    border-collapse:collapse;
+    background:#fff;
+}
+
+.news-table thead{
+    background:#f0f0f0;
+}
+
+.news-table th{
+    text-align:left;
+    padding:15px;
+    font-weight:600;
+    font-size:14px;
+    border-bottom:1px solid #ddd;
+}
+
+.news-table td{
+    padding:18px 15px;
+    border-bottom:1px solid #eee;
+    font-size:14px;
+}
+
+.news-table tbody tr:hover{
+    background:#fafafa;
+}
+
+/* 구분 */
+.news-category{
+    width:80px;
+    color:#666;
+}
+
+/* 중요 뱃지 */
+.news-badge{
+    display:inline-block;
+    font-size:11px;
+    padding:2px 6px;
+    border-radius:10px;
+    margin-right:8px;
+    border:1px solid #ff4b8b;
+    color:#ff4b8b;
+}
+
+/* 날짜 */
+.news-date{
+    text-align:right;
+    color:#666;
+    width:120px;
+}
+
+/* 페이징 */
+.news-pagination{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:15px;
+    margin-top:30px;
+    font-size:14px;
+}
+
+.news-pagination span{
+    cursor:pointer;
+    color:#666;
+}
+
+.news-pagination .active{
+    background:#333;
+    color:#fff;
+    padding:4px 10px;
+    border-radius:4px;
+}
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:"Noto Sans KR", sans-serif;
+}
+
+body{
+    background:white;
+    color:#222;
+}
+
+/* ===== 전체 영역 ===== */
+.faq-wrap{
+    width:1100px;
+    margin:60px auto;
+}
+
+/* ===== 타이틀 ===== */
+.faq-title{
+    font-size:32px;
+    font-weight:700;
+    margin-bottom:30px;
+}
+
+/* ===== 상단 카테고리 탭 ===== */
+.faq-tabs{
+    display:flex;
+    gap:40px;
+    border-bottom:1px solid #ddd;
+    padding-bottom:15px;
+    margin-bottom:30px;
+}
+
+.faq-tabs span{
+    cursor:pointer;
+    color:#777;
+    font-size:16px;
+}
+
+.faq-tabs .active{
+    color:var(--active-color);
+    font-weight:600;
+    border-bottom:3px solid var(--active-color);
+    padding-bottom:12px;
+}
+
+/* ===== 아코디언 ===== */
+.faq-item{
+    background:#fff;
+    border-bottom:1px solid #eee;
+}
+
+.faq-question{
+    padding:20px;
+    font-size:15px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    cursor:pointer;
+}
+
+.faq-question:hover{
+    background:#fafafa;
+}
+
+.faq-answer{
+    display:none;
+    padding:20px;
+    font-size:14px;
+    color:#555;
+    background:#f9f9f9;
+    line-height:1.6;
+}
+
+.faq-date{
+    font-size:12px;
+    color:#888;
+}
+
+/* ===== 페이징 ===== */
+.faq-pagination{
+    display:flex;
+    justify-content:center;
+    gap:15px;
+    margin-top:40px;
+    font-size:14px;
+}
+
+.faq-pagination span{
+    cursor:pointer;
+    color:#666;
+}
+
+.faq-pagination .active{
+    background:#333;
+    color:#fff;
+    padding:4px 10px;
+    border-radius:4px;
+}
+.notice-btn-area{
+text-align:center;
+margin-top:40px;
+}
+
+.notice-btn{
+padding:10px 40px;
+border:1px solid #ccc;
+border-radius:30px;
+background:#fff;
+cursor:pointer;
+font-size:14px;
+}
+
+.notice-btn:hover{
+background:#f5f5f5;
+}

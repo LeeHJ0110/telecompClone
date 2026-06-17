@@ -1,0 +1,412 @@
+main * {
+  box-sizing: border-box;
+  font-family: 'Noto Sans KR', sans-serif;
+  
+}
+main{
+  padding: 40px;
+}
+body {
+  background-color: #f5f5f5;
+}
+
+.plan-card {
+  background: #ffffff;
+  border-radius: 12px;
+  display: flex;
+  justify-content: space-between;
+  padding: 40px;
+  max-width: 1100px;
+  margin: 0 auto;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
+  transition: transform 0.2s;
+}
+.plan-card:hover { transform: translateY(-2px); border-color: #dee2e6; }
+
+/* 왼쪽 영역 */
+.plan-left {
+  flex: 1.5;
+}
+
+.badge-new {
+  display: inline-block;
+  background: var(--active-color);
+  color: white;
+  font-size: 13px;
+  padding: 4px 8px;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+.badge-popular {
+  display: inline-block;
+  background: #ac34a6;
+  color: white;
+  font-size: 13px;
+  padding: 4px 8px;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+.plan-subtitle {
+  font-size: 15px;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.plan-title {
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 25px;
+  line-height: 1.4;
+}
+
+.plan-title span {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.price-area {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.price {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.discount {
+  font-size: 14px;
+  color: #888;
+}
+
+.detail-btn {
+  background: #f1f1f1;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+/* 구분선 */
+.plan-divider {
+  width: 1px;
+  background: #e5e5e5;
+  margin: 0 40px;
+}
+
+/* 오른쪽 영역 */
+.plan-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.benefit {
+  margin-bottom: 12px;
+}
+
+.label {
+  font-size: 14px;
+  color: #666;
+  margin-right: 10px;
+}
+
+.value {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.button-area {
+  display: flex;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.compare-btn {
+  padding: 10px 20px;
+  border: 1px solid #ccc;
+  background: #fff;
+  border-radius: 24px;
+  cursor: pointer;
+}
+
+.change-btn {
+  padding: 10px 20px;
+  border: 1px solid #ff2f8b;
+  background: #fff;
+  color: #ff2f8b;
+  border-radius: 24px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+/* ============================= */
+/*        PLAN CARD V2          */
+/* ============================= */
+
+.plan-card-v2 {
+  background: #ffffff;
+  border-radius: 14px;
+  display: flex;
+  justify-content: space-between;
+  padding: 40px;
+  max-width: 1100px;
+  margin: 40px auto;
+  border: 1px solid #e0e0e0;
+}
+
+/* 왼쪽 */
+.plan-v2-left {
+  flex: 1.5;
+}
+
+.plan-v2-top {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 18px;
+}
+
+.plan-v2-badge {
+  background: #6c2bd9;
+  color: #fff;
+  font-size: 12px;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-weight: 600;
+}
+
+.plan-v2-subtitle {
+  font-size: 15px;
+  color: #333;
+  font-weight: 500;
+}
+
+.plan-v2-title {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.plan-v2-speed {
+  font-size: 14px;
+  color: #7b3fe4;
+  margin-left: 8px;
+  font-weight: 500;
+}
+
+.plan-v2-share {
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 28px;
+}
+
+.plan-v2-price-area {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.plan-v2-price {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.plan-v2-discount {
+  font-size: 14px;
+  color: #777;
+}
+
+.plan-v2-detail-btn {
+  background: #eaeaea;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+/* 구분선 */
+.plan-v2-divider {
+  width: 1px;
+  background: #dcdcdc;
+  margin: 0 40px;
+}
+
+/* 오른쪽 */
+.plan-v2-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.plan-v2-benefit {
+  margin-bottom: 14px;
+}
+
+.plan-v2-label {
+  font-size: 14px;
+  color: #777;
+  margin-right: 12px;
+}
+
+.plan-v2-value {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.plan-v2-button-area {
+  display: flex;
+  gap: 12px;
+  margin-top: 30px;
+}
+
+.plan-v2-compare-btn {
+  padding: 10px 24px;
+  border: 1px solid #ccc;
+  background: #fff;
+  border-radius: 24px;
+  cursor: pointer;
+}
+
+.plan-v2-change-btn {
+  padding: 10px 24px;
+  border: 1px solid #ff2f8b;
+  background: #fff;
+  color: #ff2f8b;
+  border-radius: 24px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.plan-v2-update-btn{
+  padding: 10px 24px;
+  border: 1px solid red;
+  background: #fff;
+  color: red;
+  border-radius: 24px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+/* ============================= */
+/*        PAGE AREA              */
+/* ============================= */
+
+#page-area{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:10px;
+  margin-top:40px;
+}
+
+#page-area button{
+  min-width:40px;
+  height:40px;
+  border-radius:8px;
+  border:1px solid #ddd;
+  background:white;
+  font-size:16px;
+  cursor:pointer;
+  transition:all 0.2s;
+}
+
+#page-area button:hover{
+  background:#ff2f8b;
+  color:white;
+  border-color:#ff2f8b;
+}
+/* ============================= */
+/*          SORT AREA            */
+/* ============================= */
+
+.plan-sort-area{
+  max-width:1100px;
+  margin:0 auto 20px auto;
+  display:flex;
+  justify-content:flex-end;
+  align-items:center;
+  gap:10px;
+}
+
+.sort-title{
+  font-size:14px;
+  color:#666;
+}
+
+#sort-select{
+  padding:8px 12px;
+  border-radius:6px;
+  border:1px solid #ddd;
+  font-size:14px;
+  cursor:pointer;
+}
+
+.add-btn { 
+  background-color: #007bff; 
+  color: white; 
+  border: none; padding: 10px 20px; 
+  border-radius: 8px; cursor: pointer; 
+  font-weight: bold; }
+
+a,
+a:visited,
+a:hover,
+a:active {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+.plan-card-v2 input {
+    border: 1px solid transparent;
+    border-bottom: 1px solid #ddd;
+    padding: 5px;
+    transition: all 0.3s;
+}
+
+.plan-card-v2 input:focus {
+    border-bottom: 1px solid #6c2bd9;
+    background-color: #f9f7ff;
+}
+
+/* placeholder 색상 연하게 */
+.plan-card-v2 input::placeholder {
+    font-size: 0.8em;
+    color: #bbb;
+    font-weight: 400;
+}
+
+.input-group-v2 {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 5px;
+}
+
+.mini-label {
+    font-size: 11px;
+    color: #7b3fe4; /* 테마 색상 */
+    font-weight: bold;
+    margin-bottom: 2px;
+    opacity: 0.7;
+}
+
+/* 인풋 테두리 가시성 확보 */
+.plan-v2-left input, .plan-v2-right input {
+    border: none;
+    border-bottom: 1px solid #eee;
+    padding: 4px 0;
+    width: 100%;
+    outline: none;
+}
+
+.plan-v2-left input:focus, .plan-v2-right input:focus {
+    border-bottom: 1px solid #7b3fe4;
+}

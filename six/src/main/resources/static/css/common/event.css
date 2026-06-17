@@ -1,0 +1,47 @@
+.event-win-page{
+min-height:calc(100vh - 70px);
+display:flex;
+align-items:center;
+justify-content:center;
+background:#f8f9fb;
+}
+
+.event-win-box{
+text-align:center;
+background:white;
+padding:60px 80px;
+border-radius:16px;
+box-shadow:0 8px 30px rgba(0,0,0,0.05);
+}
+
+.event-icon{
+font-size:80px;
+color:var(--active-color);
+margin-bottom:20px;
+}
+
+.event-title{
+font-size:26px;
+font-weight:700;
+margin-bottom:12px;
+}
+
+.event-desc{
+color:#666;
+font-size:15px;
+margin-bottom:30px;
+}
+
+.event-btn{
+padding:12px 30px;
+border:none;
+background:#ff008c;
+color:white;
+font-size:15px;
+border-radius:30px;
+cursor:pointer;
+}
+
+.event-btn:hover{
+opacity:0.9;
+}

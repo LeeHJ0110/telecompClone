@@ -1,1 +1,1 @@
-# telecompClone
+# semiProject
